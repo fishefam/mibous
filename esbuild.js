@@ -3,6 +3,7 @@ import esbuild from 'esbuild'
 import clean from 'esbuild-plugin-clean'
 import postcss from 'esbuild-postcss'
 import svelte from 'esbuild-svelte'
+import sveltePreprocess from 'svelte-preprocess'
 
 const { BROWSER, ENV, WITH_WEBEXT } = process.env
 
@@ -33,7 +34,7 @@ const config = {
   minify: true,
   minifyWhitespace: false,
   outdir: 'dist',
-  plugins: [postcss(), svelte(), clean({ patterns: ['dist'] })],
+  plugins: [svelte({ preprocess: sveltePreprocess() }), postcss(), clean({ patterns: ['dist'] })],
   sourcemap: ENV === 'development',
   treeShaking: true,
 }
