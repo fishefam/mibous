@@ -9,6 +9,7 @@ if (html) {
   html.innerHTML = `
         <head>
             <link rel="stylesheet" href="${resolveUrl('app.css')}">
+            <link rel="shortcut icon" href="../skins/default/favicon.ico">
         </head> 
         <body>
             <div class="app"></div>

@@ -8,7 +8,8 @@
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": "latest",
-    "sourceType": "module"
+    "sourceType": "module",
+    "warnOnUnsupportedTypeScriptVersion": false
   },
   "plugins": ["@typescript-eslint", "simple-import-sort", "unused-imports", "sort-keys-fix"],
   "overrides": [{ "files": ["*.svelte"], "parser": "svelte-eslint-parser" }],
