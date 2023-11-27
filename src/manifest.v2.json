@@ -1,0 +1,9 @@
+{
+  "manifest_version": 2,
+  "name": "mobius",
+  "version": "1.0.0",
+  "content_scripts": [
+    { "matches": ["https://*.mobius.cloud/qbeditor/*"], "js": ["index.js"], "run_at": "document_start" }
+  ],
+  "web_accessible_resources": ["*"]
+}
